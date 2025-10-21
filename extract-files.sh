@@ -78,10 +78,6 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "vendor.oplus.hardware.displaypanelfeature-V1-ndk.so" "vendor.oplus.hardware.displaypanelfeature-V1-ndk_odm.so" "${2}"
             ;;
-        odm/etc/camera/CameraHWConfiguration.config)
-            [ "$2" = "" ] && return 0
-            sed -i "/SystemCamera = / s/1;/0;/g" "${2}"
-            ;;
         odm/etc/init/vendor.oplus.hardware.biometrics.fingerprint@2.1-service.rc)
             [ "$2" = "" ] && return 0
             sed -i "8i\    task_profiles ProcessCapacityHigh MaxPerformance" "${2}"
