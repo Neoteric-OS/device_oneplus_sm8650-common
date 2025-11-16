@@ -48,6 +48,9 @@ PRODUCT_PACKAGES += \
     sound_trigger.primary.pineapple \
     vendor.qti.audio-adsprpc-service.rc
 
+
+$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio/sku_pineapple_qssi/audio_policy_configuration.xml
 
