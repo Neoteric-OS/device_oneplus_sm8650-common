@@ -202,6 +202,7 @@ PRODUCT_PACKAGES += \
     fstab.qcom \
     init.oplus.rc \
     init.target.rc \
+    init.oplus.sh \
     ueventd.oplus.rc
 
 # Identity
