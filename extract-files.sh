@@ -106,7 +106,7 @@ function blob_fixup() {
             ;;
         odm/lib64/libCOppLceTonemapAPI.so|odm/lib64/libCS.so|odm/lib64/libSuperRaw.so|odm/lib64/libYTCommon.so|odm/lib64/libyuv2.so)
             [ "$2" = "" ] && return 0
-            "${PATCHELF_0_17_2}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
+            "${PATCHELF}" --replace-needed "libstdc++.so" "libstdc++_vendor.so" "${2}"
             ;;
         odm/lib64/libdisplayaidlapis.so)
             [ "$2" = "" ] && return 0
@@ -119,6 +119,14 @@ function blob_fixup() {
         product/etc/sysconfig/com.android.hotwordenrollment.common.util.xml)
             [ "$2" = "" ] && return 0
             sed -i "s/\/my_product/\/product/" "${2}"
+            ;;
+        system_ext/bin/horae)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-lite.so" "libprotobuf-cpp-lite-21.7.so" "${2}"
+            ;;
+        system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-21.7.so" "${2}"
             ;;
         vendor/etc/init/vendor.qti.camera.provider-service_64.rc)
             [ "$2" = "" ] && return 0
