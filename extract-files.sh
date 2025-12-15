@@ -73,6 +73,7 @@ function blob_fixup() {
         odm/bin/hw/vendor.oplus.hardware.biometrics.fingerprint@2.1-service_uff)
             [ "$2" = "" ] && return 0
             grep -q "libshims_aidl_fingerprint_v3.oplus.so" "${2}" || "${PATCHELF}" --add-needed "libshims_aidl_fingerprint_v3.oplus.so" "${2}"
+            "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2_stock.so" "${2}"
             ;;
         odm/bin/hw/vendor.oplus.hardware.displaypanelfeature-service)
             [ "$2" = "" ] && return 0
@@ -127,6 +128,20 @@ function blob_fixup() {
         system_ext/lib64/vendor.qti.hardware.qccsyshal@1.2-halimpl.so)
             [ "$2" = "" ] && return 0
             "${PATCHELF}" --replace-needed "libprotobuf-cpp-full.so" "libprotobuf-cpp-full-21.7.so" "${2}"
+            ;;
+        vendor/lib64/libdpps.so|vendor/lib64/libsnapdragoncolor-manager.so \
+       |odm/lib64/libdisplaycolorfeature.so \
+       |odm/lib64/libdisplayfossfeature_nature.so \
+       |vendor/bin/qvrdatauploader \
+       |odm/bin/hw/vendor-oplus-hardware-touch-V2-service \
+       |odm/bin/touchDaemon)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libtinyxml2.so" "libtinyxml2_stock.so" "${2}"
+            ;;
+        vendor/lib64/libcapiv2uvvendor.so|vendor/lib64/liblistensoundmodel2vendor.so \
+	|vendor/lib64/libVoiceSdk.so)
+            [ "$2" = "" ] && return 0
+            "${PATCHELF}" --replace-needed "libtensorflowlite_c.so" "libtensorflowlite_c_vendor.so" "${2}"
             ;;
         vendor/etc/init/vendor.qti.camera.provider-service_64.rc)
             [ "$2" = "" ] && return 0
