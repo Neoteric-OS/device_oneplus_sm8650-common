@@ -1,5 +1,5 @@
 ## All proprietary files from this list, unless pinned and noted otherwise,
-## are from OnePlus 12 (CPH2581_15.0.0.840(EX01)).
+## are from OnePlus 12 (CPH2581_16.0.1.300(EX01)).
 
 # Current blobs with ELF checks disabled:
 # libOPAlgoCamFaceBeautyCap, libEIS, libHIS, libOGLManager, libarcsoft_high_dynamic_range_v4 depends on NDK libnativewindow and build is unable to resolve its symbols
@@ -1552,6 +1552,8 @@ odm/lib64/libarcsoft_videoautozoom.so;FIX_SONAME
 odm/lib64/libc++_shared.so
 odm/lib64/libcalculator.so
 odm/lib64/libcalculator_htp.so
+odm/lib64/libcreateFDCLitecachebin.so
+odm/lib64/libcreateFDCcachebin.so
 odm/lib64/libcreatebin.so
 odm/lib64/libcvface_api.so
 odm/lib64/libdualcam_optical_zoom_control.so
@@ -2100,7 +2102,7 @@ vendor/lib64/vendor.qti.hardware.embmssl@1.1.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.hardware.embmsslaidl-V1-ndk.so
 vendor/lib64/vendor.qti.hardware.radio.atfwd-V1-ndk.so
 
-# Data (RIL) - Pinned from Asus WW-35.1210.1420.124
+# Data (RIL) - Pinned from pinned from WW-36.0210.1420.27
 vendor/bin/adpl|690f315e32ce1b26d348a4a75a9a6633b6c2685a
 vendor/bin/port-bridge|bc4dcb20ac50b3a5f128915daeb0f76c5a88d016
 vendor/bin/qti|0492e8719b0feba85e6b419dfc96eb1d0c887c88
@@ -2602,7 +2604,7 @@ my_product/framework/com.android.hotwordenrollment.common.util.jar:product/frame
 my_product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentXGoogleHEXAGON_WIDEBAND.apk
 my_product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk:product/priv-app/HotwordEnrollmentYGoogleHEXAGON_WIDEBAND.apk
 
-# IMS - Pinned from Asus WW-35.1210.1420.124
+# IMS - Pinned from pinned from WW-36.0210.1420.27
 vendor/bin/ims-dataservice-daemon|c32c584b3b8627b129a09959e6895763962c09bc
 vendor/bin/ims_rtp_daemon|02f326df83208c819c5f5e938343e7529dca9644
 vendor/bin/imsdaemon|4326a7a1471fb6ee77f23c6ac7598089515cecc9
@@ -2991,7 +2993,7 @@ vendor/lib64/vendor.qti.qesdhalaidl-V2-ndk.so
 vendor/lib64/vendor.qti.qesdsys-V3-ndk.so
 vendor/lib64/vendor.qti.qesdsys-V4-ndk.so
 
-# QMI - Pinned from Asus WW-35.1210.1420.124
+# QMI - Pinned from pinned from WW-36.0210.1420.27
 vendor/bin/init.qti.write.sh|23980bc0722eea97111cc1fe63ec17eeb1d978df
 vendor/bin/irsc_util|d8e9e7959c628289c013f80fea59d2611092b585
 vendor/bin/qlm-service|2b1d19b6f15888a673866678c93f8be531e73726
@@ -3074,7 +3076,7 @@ vendor/lib64/libtracker_6dof_impl.so
 vendor/lib64/vendor.qti.hardware.qxr-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.qti.qegahal-V1-ndk_platform.so
 
-# RIL - Pinned from Asus WW-35.1210.1420.124
+# RIL - Pinned from pinned from WW-36.0210.1420.27
 vendor/bin/hw/qcrilNrd|d517d3009ab1a1dade06fd4921e60dd8add32129
 vendor/bin/ks|8b3ef949c0ed510d1bf8a3aa205b2fb28028a9a5
 vendor/bin/nicmd|d929012d80c9af404b0d0f5d44546056036000af
