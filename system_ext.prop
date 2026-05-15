@@ -44,6 +44,7 @@ persist.data.wda.enable=true
 persist.rmnet.data.enable=true
 
 # Radio
+persist.oplus.qspa.modem=enabled
 persist.radio.hvolte.enable=1
 persist.vendor.radio.poweron_opt=1
 

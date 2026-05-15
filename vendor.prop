@@ -44,6 +44,7 @@ persist.vendor.qcom.bluetooth.scram.enabled=false
 persist.vendor.qcom.bluetooth.twsp_state.enabled=false
 
 # Camera
+ro.camera.disableHeicUltraHDR=true
 ro.camera.enableCamera1MaxZsl=1
 ro.vendor.oplus.camera.frontCamSize=32MP
 ro.vendor.oplus.camera.backCamSize=50MP+48MP+64MP

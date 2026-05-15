@@ -1969,6 +1969,8 @@ vendor/firmware/CAMERA_ICP_170.elf
 vendor/firmware/tof8801_firmware.bin
 
 # CDSP
+odm/lib64/aiframe/cdsp/signed/libQnnHtpV75Skel.so;MODULE_SUFFIX=.signed.aiframe
+odm/lib64/aiframe/cdsp/unsigned/libQnnHtpV75Skel.so;MODULE_SUFFIX=.unsigned.aiframe
 vendor/bin/cdsprpcd
 vendor/etc/init/vendor.qti.cdsprpc-service.rc
 vendor/lib64/libQ6MSFR_manager_stub.so
@@ -2589,6 +2591,7 @@ system/lib64/libostatslog.so:system_ext/lib64/libostatslog.so
 system_ext/bin/horae
 system_ext/etc/horae/horae.conf
 system_ext/etc/horae/horae_SM7675.conf
+system_ext/etc/horae/horae_SM8635.conf
 system_ext/etc/horae/horae_SM8650.conf
 system_ext/etc/horae/horae_SM8650_CAIHONG.conf
 system_ext/etc/init/horae.rc
@@ -2774,6 +2777,13 @@ odm/lib64/aiboost/libQnnHtp.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnHtpV75Stub.so;MODULE_SUFFIX=.aiboost
 odm/lib64/aiboost/libQnnSystem.so;MODULE_SUFFIX=.aiboost
+odm/lib64/aiframe/libQnnHtp.so;MODULE_SUFFIX=.aiframe
+odm/lib64/aiframe/libQnnHtpPrepare.so;MODULE_SUFFIX=.aiframe
+odm/lib64/aiframe/libQnnHtpV75Stub.so;MODULE_SUFFIX=.aiframe
+odm/lib64/aiframe/libQnnSystem.so;MODULE_SUFFIX=.aiframe
+odm/lib64/aiframe/libaiboost_qnn_external_delegate.so;FIX_SONAME
+odm/lib64/aiframe/libqcom_llm.so
+odm/lib64/aiframe/libtransformer_lite.so
 odm/lib64/libAIEngine.so
 odm/lib64/libQnnCpu.so
 odm/lib64/libQnnGpu.so
@@ -2784,7 +2794,7 @@ odm/lib64/libQnnHtpV75Stub.so
 odm/lib64/libQnnSaver.so
 odm/lib64/libQnnSystem.so
 odm/lib64/libaiboost.so
-odm/lib64/libaiboost_qnn_external_delegate.so;FIX_SONAME
+odm/lib64/libaiboost_llm.so
 odm/lib64/libaiboost_qnn_external_delegate_te.so;FIX_SONAME
 odm/lib64/libaiboost_qnn_sr.so;FIX_SONAME
 odm/lib64/libaiboost_sr.so;FIX_SONAME
@@ -2807,9 +2817,10 @@ odm/lib64/libosenseaidlhalclient.so
 odm/lib64/libosensenativeproxy_client.so
 
 # OPLUS Charger
-odm/bin/hw/vendor.oplus.hardware.charger-V6-service
+odm/bin/hw/gauged
+odm/bin/hw/vendor.oplus.hardware.charger-V9-service
 odm/bin/hw/wlschgd
-odm/etc/init/vendor.oplus.hardware.charger-V6-service.rc
+odm/etc/init/vendor.oplus.hardware.charger-V9-service.rc
 odm/etc/vintf/manifest/manifest_oplus_charger_aidl.xml
 odm/etc/charge.cfg
 
@@ -2839,11 +2850,6 @@ vendor/lib64/vendor.oplus.hardware.cwb-V1-ndk.so
 vendor/lib64/vendor.oplus.hardware.cwb@1.0.so
 vendor/lib64/vendor.oplus.hardware.displaycolorfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
 vendor/lib64/vendor.oplus.hardware.displaypanelfeature-V1-ndk.so;MODULE_SUFFIX=_vendor
-
-# OPLUS Project
-odm/bin/hw/vendor.oplus.hardware.stability.oplus_project-V1-service
-odm/etc/init/vendor.oplus.hardware.stability.oplus_project-V1-service.rc
-odm/etc/vintf/manifest/manifest_oplus_stability_project_aidl.xml
 
 # PD
 vendor/bin/pd-mapper
@@ -3015,6 +3021,10 @@ vendor/lib64/libqrtr.so|4235566c1d5d289be35e662db77e3c1065cea756
 vendor/lib64/libqsocket.so|bc4167bb1498f28d0033487b02889fb710a03983
 vendor/lib64/libsmemlog.so|b85721b1c7f9ad9e0f17171d87388edb82224624
 vendor/lib64/libsystem_health_mon.so|999838fe3ea8dbdfd6f130c0f6aabf7a631174f3
+
+# QSPA
+system_ext/etc/init/qspa_system.rc
+system_ext/etc/qspa/qspa_default.rc
 
 # QSPM
 vendor/bin/vendor.qti.qspmhal-service
@@ -3251,6 +3261,7 @@ vendor/lib64/libqcbor.so
 odm/bin/hw/android.hardware.secure_element-service.qti
 odm/etc/init/android.hardware.secure_element-service.qti.rc
 odm/lib64/android.hardware.secure_element-V1-ndk.so:odm/lib64/android.hardware.secure_element-V1-ndk_odm.so;FIX_SONAME
+odm/lib64/libsecurity_event_olc_vnd.so
 vendor/etc/vintf/manifest/android.hardware.secure_element.xml
 vendor/lib64/hw/libEseUtils.so
 vendor/lib64/libGPQeSE.so
